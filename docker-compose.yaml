@@ -1,5 +1,6 @@
+version: "2"
 services:
-  redis:
+  node:
     image: "saikiran786/helloworld"
     ports:
      - "8087:3000"
