@@ -34,12 +34,15 @@ node {
         }
     }
     
- }
+ 
 
-agent {
-    docker {
-        image 'saikiran786/helloworld'
-        label 'node1'
-        args  '-v /tmp:/tmp'
+stage('Example Deploy') {
+            agent {
+                label "node1"
+            }
+    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+            /*app.push("${env.BUILD_NUMBER}")*/
+            app.pull("latest")
     }
+}
 }
