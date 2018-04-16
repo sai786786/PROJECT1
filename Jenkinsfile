@@ -34,13 +34,11 @@ node {
         }
     }
     
- 
-
-stage('Example Deploy') {
+    stage('docker Deploy') {
             agent {
                 label "node1"
             }
-    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             /*app.push("${env.BUILD_NUMBER}")*/
             app.pull("latest")
     }
