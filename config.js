@@ -28,7 +28,7 @@ var config = {
 }
 function commonVariables() {
   return {
-    port: 8081,
+    port: 3000,
     ServerName:"Node Server"
   }
 }
