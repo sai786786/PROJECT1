@@ -4,4 +4,4 @@ services:
     image: "saikiran786/helloworld"
     ports:
      - "8087:3000"
-    command: "NODE_ENV="production" node app.js"
+    command: 'NODE_ENV="production" node app.js'
