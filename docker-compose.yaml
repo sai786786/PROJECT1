@@ -1,6 +1,6 @@
 version: "2"
 services:
-  node:
+  default:
     image: "saikiran786/helloworld"
     ports:
      - "8087:3000"
