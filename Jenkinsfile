@@ -35,17 +35,11 @@ node('node1'){
     }
     
     stage('docker Deploy') {
-            agent {
-                label "node1"
-            }
+            
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             /*app.push("${env.BUILD_NUMBER}")*/
             app.pull("latest")
     }
-}
 
-    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            /*app.push("${env.BUILD_NUMBER}")*/
-            app.pull("latest")
-    }
+}
 }
