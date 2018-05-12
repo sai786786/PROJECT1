@@ -7,12 +7,12 @@ node{
         checkout scm
     }
 
-    /*stage('Build image') {
+    stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-      /*  app = docker.build("saikiran786/helloworld")
-    }*/
+        app = docker.build("saikiran786/helloworld")
+    }
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
