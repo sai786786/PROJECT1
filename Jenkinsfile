@@ -33,8 +33,4 @@ node{
             app.push("latest")
         }
     }
-    
-    
-
-}
 }
