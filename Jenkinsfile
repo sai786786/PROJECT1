@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent 
     stages {
         stage('say hi') {
             steps {
@@ -47,11 +47,11 @@ pipeline {
         }
     stage('deploy') {
             agent {
-                label 'deploy-host'
+                label 'HYD'
             }
             steps {
                 sh 'deploy-code-here'
-}
+        }
     }
 
-
+    }
