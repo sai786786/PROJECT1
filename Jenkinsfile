@@ -31,8 +31,11 @@ node{
         /*docker.withRegistry('https://hub.docker.com/', 'f0249c23-5f8c-4a57-b876-eadb5557076d') {
            * app.push("${env.BUILD_NUMBER}")
             *app.push("latest")
-              *sh  'docker login --username=saikiran786 --email=saikiran786786@gmail.com --password=9966786786'*/
-        sh 'docker push saikiran786/helloworld'
+            *sh  'docker login --username=saikiran786 --email=saikiran786786@gmail.com --password=9966786786'*/
+        docker.withRegistry('https://registry.hub.docker.com', 'f0249c23-5f8c-4a57-b876-eadb5557076d') {
+            app.push("${env.BUILD_NUMBER}")
+            app.push("latest")
+              }
         }
     }
 
